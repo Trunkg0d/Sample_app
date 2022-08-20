@@ -3,4 +3,5 @@
 import "controllers"
 import jquery from 'jquery'
 window.$ = jquery
-
+import "custom/menu"
+import "custom/image_upload"
