@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  before_action :log_still_log, only: [:create, :new]
   def new
   end
 
@@ -7,7 +8,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       flash[:success] = "Login successful"
       log_in(user)
-      remember(user)
+      params[:session][:remember_me] == '1' ? remember(user) : forget(user)
       redirect_to user
     else
       flash[:danger] = "Invalid email/password combination"
@@ -18,5 +19,11 @@ class SessionsController < ApplicationController
   def destroy
     log_out if logged_in?
     redirect_to root_url
+  end
+
+  def log_still_log
+    if logged_in?
+      redirect_to root_url
+    end
   end
 end

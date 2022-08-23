@@ -9,7 +9,7 @@ gem 'bcrypt', '3.1.13'
 # gem 'bootstrap-sass', '3.4.1'
 
 gem 'will_paginate', '3.3'
-gem 'bootstrap-will_paginate', '1.0.0'
+gem 'will_paginate-bootstrap4'
 
 gem "font-awesome-sass", "~> 6.1.2"
 
@@ -66,6 +66,7 @@ end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
+  gem 'pry', '~> 0.14.1'
   gem "web-console"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
