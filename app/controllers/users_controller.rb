@@ -19,9 +19,12 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params) # Not the final implementation!
     if @user.save
-      log_in @user
-      flash[:success] = "Welcome to the Sample App"
-      redirect_to @user
+      # @user.activation_token = User.new_token
+      @user.send_activation_email
+      flash[:info] = "Please check your email to activate your account."
+      # log_in @user
+      # flash[:success] = "Welcome to the Sample App"
+      redirect_to root_url
       #equal to redirect_to user_url(@user)
     else
       render 'new'
@@ -64,7 +67,7 @@ class UsersController < ApplicationController
 
     def correct_user
       @user = User.find(params[:id])
-      redirect_to(root_url) unless @user == current_user?(user)
+      redirect_to(root_url) unless current_user?(@user)
     end
 
     def admin_user
