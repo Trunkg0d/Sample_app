@@ -93,8 +93,8 @@ Rails.application.configure do
   config.force_ssl = true
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  host = '<your heroku app>.herokuapp.com'
-  config.action_mailer.default_url_options = { host: host }
+  host = 'rails-tutorial-demo.herokuapp.com'
+  config.action_mailer.default_url_options = { host: host, protocol: "https" }
   config.action_mailer.smtp_settings = {
     :user_name => 'f4faf1b8a2d212',
     :password => '3bff0fa441ed36',
