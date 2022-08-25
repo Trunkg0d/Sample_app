@@ -69,19 +69,19 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
 
   config.action_mailer.raise_delivery_errors = true
-  host = 'example.com' # Don't use this literally; use your local dev host instead
-  # Use this on the cloud IDE.
-  config.action_mailer.default_url_options = { host: 'host' }
+  # host = 'example.com' # Don't use this literally; use your local dev host instead
+
   # Use this if developing on localhost.
-  # config.action_mailer.default_url_options = { host: host, protocol: 'http' }
+  host = 'rails-tutorial-demo.herokuapp.com'
+  config.action_mailer.default_url_options = { host: host }
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address:              'smtp.gmail.com',
-    port:                 587,
-    domain:               'domain.of.sender.net',
-    user_name:            'trungsanglong25@gmail.com',
-    password:             '2510200325102003',
-    authentication:       'plain',
-    enable_starttls_auto: true
-  }
+
+config.action_mailer.smtp_settings = {
+  :user_name => 'f4faf1b8a2d212',
+  :password => '3bff0fa441ed36',
+  :address => 'smtp.mailtrap.io',
+  :domain => 'smtp.mailtrap.io',
+  :port => '2525',
+  :authentication => :cram_md5
+}
 end
