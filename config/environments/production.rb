@@ -92,9 +92,11 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   config.force_ssl = true
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.delivery_method = :smtp
-  host = '<your heroku app>.herokuapp.com'
+
+  host = 'rails-tutorial-demo.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
+  config.action_mailer.delivery_method = :smtp
+
   config.action_mailer.smtp_settings = {
     :user_name => 'f4faf1b8a2d212',
     :password => '3bff0fa441ed36',
@@ -102,6 +104,6 @@ Rails.application.configure do
     :domain => 'smtp.mailtrap.io',
     :port => '2525',
     :authentication => :cram_md5
-  }
+}
 
 end
