@@ -106,6 +106,6 @@ Rails.application.configure do
     :authentication => :cram_md5
 }
   # Store uploaded files on Amazon AWS.
-  config.active_storage.service = :amazon
+  # config.active_storage.service = :amazon
 
 end
