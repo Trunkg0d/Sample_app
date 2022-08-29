@@ -7,7 +7,7 @@ ruby "3.1.2"
 gem 'active_storage_validations', '0.8.2'
 
 gem 'bcrypt', '3.1.13'
-
+gem "carrierwave"
 # gem 'bootstrap-sass', '3.4.1'
 
 gem 'will_paginate', '3.3'
