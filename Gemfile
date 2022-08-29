@@ -7,7 +7,7 @@ ruby "3.1.2"
 gem 'active_storage_validations', '0.8.2'
 
 gem 'bcrypt', '3.1.13'
-
+gem "carrierwave"
 # gem 'bootstrap-sass', '3.4.1'
 
 gem 'will_paginate', '3.3'
@@ -60,7 +60,7 @@ gem "bootsnap", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem "image_processing", "1.9.3"
-gem 'mini_magick', '4.9.5'
+gem 'rmagick', '~> 2.15', '>= 2.15.4'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
