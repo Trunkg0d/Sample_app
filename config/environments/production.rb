@@ -105,5 +105,7 @@ Rails.application.configure do
     :port => '2525',
     :authentication => :cram_md5
 }
+  # Store uploaded files on Amazon AWS.
+  # config.active_storage.service = :amazon
 
 end
