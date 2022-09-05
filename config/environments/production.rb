@@ -95,16 +95,13 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: ENV['DOMAIN_URL'] }
   config.action_mailer.delivery_method = :smtp
-
   config.action_mailer.smtp_settings = {
-    :user_name => 'f4faf1b8a2d212',
-    :password => '3bff0fa441ed36',
+    :user_name => '54373f4e8f6f07',
+    :password => 'e23bbccc4e73b9',
     :address => 'smtp.mailtrap.io',
     :domain => 'smtp.mailtrap.io',
     :port => '2525',
     :authentication => :cram_md5
-}
-  # Store uploaded files on Amazon AWS.
-  # config.active_storage.service = :amazon
+  }
 
 end
